@@ -18,10 +18,18 @@ namespace Game
             // black rooks
             SetPiece(new Coordinates(Files.A, 8), new Rook(new Coordinates(Files.A, 8), Color.White));
             SetPiece(new Coordinates(Files.H, 8), new Rook(new Coordinates(Files.A, 8), Color.White));
+
+            // white knights
+            SetPiece(new Coordinates(Files.B, 1), new Knight(new Coordinates(Files.B, 1), Color.White));
+            SetPiece(new Coordinates(Files.G, 1), new Knight(new Coordinates(Files.G, 1), Color.White));
+
+            // black knights
+            SetPiece(new Coordinates(Files.B, 8), new Knight(new Coordinates(Files.B, 8), Color.White));
+            SetPiece(new Coordinates(Files.G, 8), new Knight(new Coordinates(Files.G, 8), Color.White));
         }
 
         public void SetPiece(Coordinates coordinates, Piece piece) {
-            piece.coordinates = coordinates;
+            piece.Coordinates = coordinates;
             pieces.Add(coordinates, piece);
         }
 

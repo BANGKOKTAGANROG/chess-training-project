@@ -1,15 +1,24 @@
 namespace Pieces {
     public abstract class Piece {
-        public readonly Color color;
-        public Coordinates coordinates;
-
-        public Piece(Coordinates coordinates, Color color) {
-            this.coordinates = coordinates;
-            this.color = color;
+        private readonly Color color;
+        private Coordinates coordinates;
+        public Coordinates Coordinates {
+            get { 
+                return coordinates; 
+            }
+            set {
+                coordinates = value; 
+            }
+        }
+        public Color Color {
+            get { 
+                return color; 
+            }
         }
 
-        public void Move() {
-            Console.WriteLine("move mf move");
+        protected Piece(Coordinates coordinates, Color color) {
+            this.coordinates = coordinates;
+            this.color = color;
         }
     }
 }
